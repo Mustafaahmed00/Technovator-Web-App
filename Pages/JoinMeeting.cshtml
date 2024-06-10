@@ -1,0 +1,29 @@
+﻿@page
+@model Technovator_Web_App.Pages.JoinMeetingModel
+@{
+    ViewData["Title"] = "Join Meeting";
+}
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<div class="container">
+    <h2>Join Zoom Meeting</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="Username">Username</label>
+            <input type="text" class="form-control" id="Username" name="JoinMeeting.Username" required />
+        </div>
+        <div class="form-group">
+            <label for="MeetingId">Meeting ID</label>
+            <input type="text" class="form-control" id="MeetingId" name="JoinMeeting.MeetingId" required />
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" id="Password" name="JoinMeeting.Password" required />
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn mx-2">Join Meeting</button>
+        </div>
+    </form>
+</div>
