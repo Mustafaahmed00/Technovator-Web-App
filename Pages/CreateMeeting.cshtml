@@ -1,0 +1,30 @@
+﻿@page
+@model Technovator_Web_App.Pages.CreateMeetingModel
+@{
+    ViewData["Title"] = "Create Meeting";
+}
+
+@* Include the back button partial view *@
+<partial name="_BackButton" />
+
+<h1>Create Meeting</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="MeetingId">Meeting ID</label>
+        <input type="text" class="form-control" id="MeetingId" name="MeetingId" required />
+    </div>
+    <div class="form-group">
+        <label for="Username">Username</label>
+        <input type="text" class="form-control" id="Username" name="Username" required />
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password" required />
+    </div>
+    <div class="form-group">
+        <label for="Duration">Duration (minutes)</label>
+        <input type="number" class="form-control" id="Duration" name="Duration" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

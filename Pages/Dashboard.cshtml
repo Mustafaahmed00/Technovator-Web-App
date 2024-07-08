@@ -1,0 +1,65 @@
+﻿@page
+@model Technovator_Web_App.Pages.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@* Include the back button partial view *@
+<partial name="_BackButton" />
+
+<div class="dashboard-container">
+    <div class="dashboard-row">
+        <div class="dashboard-button" onclick="location.href='@Url.Page("/JoinMeeting")'">
+            Join Meeting
+        </div>
+        <div class="dashboard-button" onclick="location.href='@Url.Page("/CreateMeeting")'">
+            Create Meeting
+        </div>
+    </div>
+    <div class="dashboard-row">
+        <div class="dashboard-button settings-button" onclick="location.href='@Url.Page("/Settings")'">
+            Settings
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .dashboard-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-button {
+        width: 250px;
+        height: 120px;
+        background-color: #007bff;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 0 10px;
+        border: 2px solid black;
+    }
+
+        .dashboard-button:hover {
+            background-color: #0056b3;
+        }
+
+    .settings-button {
+        background-color: #00bcd4; /* Light teal background for settings */
+        margin-top: 40px;
+    }
+
+        .settings-button:hover {
+            background-color: #0097a7; /* Darker teal on hover */
+        }
+</style>

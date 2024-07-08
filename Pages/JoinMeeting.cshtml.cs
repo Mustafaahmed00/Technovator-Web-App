@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Web;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Technovator_Web_App.Pages
 {

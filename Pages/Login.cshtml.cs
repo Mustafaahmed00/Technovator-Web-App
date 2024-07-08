@@ -1,46 +1,43 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Technovator_Web_App.Pages
 {
     public class LoginModel : PageModel
     {
         [BindProperty]
-        public LoginInputModel Login { get; set; } = new LoginInputModel();
+        public required string Email { get; set; }
 
-        public string ErrorMessage { get; set; } = string.Empty;
+        [BindProperty]
+        public required string Password { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            ErrorMessage = string.Empty; // Ensure error message is cleared on GET
-        }
-
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                ErrorMessage = "Invalid login attempt.";
-                return Page();
-            }
-
-            // For now, allow any email and password
-            if (!string.IsNullOrEmpty(Login.Email) && !string.IsNullOrEmpty(Login.Password))
-            {
-                // Set the session variable to indicate the user is logged in
-                HttpContext.Session.SetString("IsLoggedIn", "true");
-
-                // Redirect to Join Meeting page
-                return RedirectToPage("/JoinMeeting");
-            }
-
-            ErrorMessage = "Invalid login attempt.";
             return Page();
         }
-    }
 
-    public class LoginInputModel
-    {
-        public string Email { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (Email == "M.Ahmed002@umb.edu" && Password == "password")
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, Email)
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+                return RedirectToPage("/Dashboard"); // Redirect to the Dashboard page
+            }
+
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return Page();
+        }
     }
 }

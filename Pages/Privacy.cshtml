@@ -3,6 +3,19 @@
 @{
     ViewData["Title"] = "Privacy Policy";
 }
+@* Include the back button partial view *@
+<partial name="_BackButton" />
+
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>All rights Reserved</p>
+
+
+@section Styles {
+    <style>
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+}
+

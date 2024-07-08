@@ -8,9 +8,29 @@
 </head>
 
 <div class="container">
-    <h1>Umass Boston</h1>
-    <h2>Welcome to the Technovator App</h2>
+    <img src="~/images/umass.png" alt="Umass Boston" class = "img" />
+    <h1><em>Welcome to the Beacon Flex App</em></h1>
     <p>
         <a href="/Login">Login</a> to join a meeting.
     </p>
 </div>
+
+@section Styles {
+    <style>
+        h1 {
+            text-decoration: underline;
+        }
+
+        .navbar .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #007bff !important; /* Ensure the brand text is visible */
+            visibility: visible !important; /* Ensure the element is visible */
+            display: block !important; /* Ensure the element is displayed */
+            color: black
+        }
+        .img {
+            border:2px solid black;
+        }
+    </style>
+}

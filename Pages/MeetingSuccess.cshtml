@@ -1,0 +1,14 @@
+﻿@page
+@model Technovator_Web_App.Pages.MeetingSuccessModel
+@{
+    ViewData["Title"] = "Meeting Created Successfully";
+}
+
+<h1>Meeting Created Successfully</h1>
+
+<p>@TempData["SuccessMessage"]</p>
+
+@if (TempData["MeetingDetails"] != null)
+{
+    <pre>@TempData["MeetingDetails"]</pre>
+}

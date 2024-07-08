@@ -1,0 +1,98 @@
+﻿@page
+@model Technovator_Web_App.Pages.AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+
+@* Include the back button *@
+<partial name="_BackButton" />
+
+@section Styles {
+    <style>
+        /* General page styling to ensure content is visible */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Specific styling for the About page */
+        .about-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #e9ecef; /* Optional: to differentiate the content area from the background */
+            margin-top: 80px; /* Ensure navbar doesn't overlap content */
+        }
+
+        .about-content {
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 1px solid black; /* Adding border to complete the box */
+            border-radius: 8px; /* Optional: to give rounded corners */
+        }
+
+        /* Ensure the footer stays at the bottom */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            text-decoration: underline;
+        }
+
+
+        .about-page .specific-blue-box {
+            background-color: transparent;
+            color: black !important;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10px; /* Optional: to add space between the text and the box */
+            max-width: 30px; /* Reduce the width of the blue box */
+            display: block;
+            overflow: visible;
+        }
+    </style>
+}
+
+<div class="about-content">
+    <p>
+        Welcome to Technovator Web App! This application is designed to help users create and join Zoom meetings easily.
+    </p>
+    <p>
+        <strong>Purpose:</strong>
+        <br />
+        Our app aims to streamline the process of setting up and participating in online meetings. Whether you need to host a meeting or join one, Technovator Web App makes it simple and convenient.
+    </p>
+    <p>
+        <strong>Features:</strong>
+        <ul>
+            <li>Create Zoom meetings with a few clicks.</li>
+            <li>Join meetings using a meeting ID and password.</li>
+            <li>Secure login to ensure your data is protected.</li>
+            <li>integration with Zoom's API for a smooth experience.</li>
+            <li>able to use two cameras simulataneously by one user</li>
+        </ul>
+    </p>
+    <section>
+        <strong>Contact Us</strong>
+        <p>
+            If you have any questions or feedback, feel free to reach out to us at
+        </p> <div class="specific-blue-box"> <a href="mailto:M.Ahmed002@umb.edu">M.Ahmed002@umb.edu</a></div>
+    </section>
+    <p>
+        Thank you for using Technovator Web App. We hope it makes your online meetings more efficient.
+    </p>
+</div>

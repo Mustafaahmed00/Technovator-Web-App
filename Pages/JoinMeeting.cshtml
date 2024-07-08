@@ -3,12 +3,14 @@
 @{
     ViewData["Title"] = "Join Meeting";
 }
+@* Include the back button partial view *@
+<partial name="_BackButton" />
 <head>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 
 <div class="container">
-    <h2>Join Zoom Meeting</h2>
+    <h1>Join Zoom Meeting</h1>
     <form method="post">
         <div class="form-group">
             <label for="Username">Username</label>
