@@ -7,30 +7,49 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 
-<div class="container">
-    <img src="~/images/umass.png" alt="Umass Boston" class = "img" />
-    <h1><em>Welcome to the Beacon Flex App</em></h1>
-    <p>
-        <a href="/Login">Login</a> to join a meeting.
-    </p>
-</div>
-
-@section Styles {
     <style>
-        h1 {
-            text-decoration: underline;
+        .container {
+            text-align: center;
+        }
+
+        .img {
+            border: 2px solid black;
         }
 
         .navbar .navbar-brand {
             font-weight: bold;
             font-size: 1.5em;
-            color: #007bff !important; /* Ensure the brand text is visible */
-            visibility: visible !important; /* Ensure the element is visible */
-            display: block !important; /* Ensure the element is displayed */
-            color: black
+            color: #007bff !important;
+            visibility: visible !important;
+            display: block !important;
+            color: black;
         }
-        .img {
-            border:2px solid black;
+
+        h1 {
+            text-decoration: underline;
         }
+
+        .login-btn {
+            font-size: 1.5em; /* Increase font size */
+            padding: 20px 40px; /* Increase padding */
+            background-color: #007bff; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            cursor: pointer; /* Add cursor pointer */
+        }
+
+            .login-btn:hover {
+                background-color: #0056b3; /* Darken background on hover */
+            }
     </style>
-}
+<body>
+    <div class="container">
+        <img src="~/images/umass.png" alt="Umass Boston" class="img" />
+        <h1><em>Beacon Flex App</em></h1>
+        <p>
+            <a href="/Login" class="login-btn">Login</a> to join a meeting.
+        </p>
+    </div>
+</body>
+

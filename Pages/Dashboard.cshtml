@@ -7,7 +7,7 @@
 @* Include the back button partial view *@
 <partial name="_BackButton" />
 
-<div class="dashboard-container">
+@*div class="dashboard-container">
     <div class="dashboard-row">
         <div class="dashboard-button" onclick="location.href='@Url.Page("/JoinMeeting")'">
             Join Meeting
@@ -21,10 +21,33 @@
             Settings
         </div>
     </div>
+</div>*@
+
+<div class="dashboard-container">
+    <div class="dashboard-row">
+        <div class="dashboard-button" onclick="openPopup('@Url.Page("/JoinMeeting")')">
+            Join Meeting
+        </div>
+        <div class="dashboard-button" onclick="openPopup('@Url.Page("/CreateMeeting")')">
+            Create Meeting
+        </div>
+    </div>
+    <div class="dashboard-row">
+        <div class="dashboard-button settings-button" onclick="openPopup('@Url.Page("/Settings")')">
+            Settings
+        </div>
+    </div>
 </div>
 
-<style>
+@section Scripts {
+    <script type="text/javascript">
+        function openPopup(url) {
+            window.open(url, '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+        }
+    </script>
+}
 
+<style>
     .dashboard-row {
         display: flex;
         justify-content: center;
@@ -50,16 +73,16 @@
         border: 2px solid black;
     }
 
-        .dashboard-button:hover {
-            background-color: #0056b3;
-        }
+    .dashboard-button:hover {
+        background-color: #0056b3;
+    }
 
     .settings-button {
         background-color: #00bcd4; /* Light teal background for settings */
         margin-top: 40px;
     }
 
-        .settings-button:hover {
-            background-color: #0097a7; /* Darker teal on hover */
-        }
+    .settings-button:hover {
+        background-color: #0097a7; /* Darker teal on hover */
+    }
 </style>

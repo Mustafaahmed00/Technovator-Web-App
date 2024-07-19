@@ -70,7 +70,7 @@ body {
     text-align: center;
     margin-top: 15px; /* Reduced margin-top */
     padding: 10px;
-    color: #ffffff; /* Ensure text is readable */
+    color: black; /* Ensure text is readable */
 }
 
 .footer {
@@ -82,25 +82,25 @@ body {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 0.9em; /* Adjust font size if needed */
+    font-size: 0.9em; 
 }
 
 
 h1 {
     font-size: 3em;
     margin-bottom: 30px;
-    color: #ffffff; /* Ensure heading is readable */
+    color: white; 
 }
 
 h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ffffff; /* Ensure heading is readable */
+    color: #ffffff; 
 }
 
 p {
     font-size: 1.2em;
-    color: #ffffff; /* Ensure paragraph text is readable */
+    color: #ffffff; 
 }
 
 a {
@@ -146,7 +146,7 @@ a {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
-        color: #ffffff; /* Ensure label is readable */
+        color: black; /* Ensure label is readable */
     }
 
     .form-group input {

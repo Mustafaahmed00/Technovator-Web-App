@@ -1,10 +1,37 @@
 ﻿@page
 @model Technovator_Web_App.Pages.SettingsModel
 @{
-    ViewData["Title"] = "Settings";
+    Layout = "_PopupLayout"; // Use the partial layout for this page
 }
 
-@* Include the back button partial view *@
-<partial name="_BackButton" />
+@* Include the back button partial view 
+<partial name="_BackButton" /> *@
 
-<h1>Meeting Settings</h1>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<div class="Pop-up">
+    <h1>Meeting Settings</h1>
+</div>
+
+<style>
+    .Pop-up {
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto; 
+        color: black; 
+    }
+
+        .Pop-up h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #007bff; 
+            align-content: center;
+        }
+</style>
